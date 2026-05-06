@@ -1,0 +1,50 @@
+Cell line: H2009 
+Tree:      pruned_1se 
+Root n:    11 nodes
+
+=== Decision rules ===
+[20] is_correct is 0.08 with cover 5% when
+         SV_type is BND or INS
+         SR >= 66
+         ND < 3
+         PR >= 1
+
+[4]  is_correct is 0.09 with cover 64% when
+         SV_type is BND or INS
+         SR < 66
+
+[6]  is_correct is 0.20 with cover 11% when
+         SV_type is DEL or DUP or INV
+         SS < 52
+
+[11] is_correct is 0.77 with cover 3% when
+         SV_type is BND or INS
+         SR >= 66
+         ND >= 3
+
+[21] is_correct is 0.85 with cover 2% when
+         SV_type is BND or INS
+         SR >= 66
+         ND < 3
+         PR < 1
+
+[7]  is_correct is 0.93 with cover 15% when
+         SV_type is DEL or DUP or INV
+         SS >= 52
+
+=== Variable importance ===
+    SV_type          SS          PR          SR PR_SR_ratio          ND 
+     289.42      140.16      128.57      110.96       32.68       26.32 
+        ND2      in_bed 
+       5.01        3.66 
+
+=== CP table (cross-validated error per pruning level) ===
+          CP nsplit rel error    xerror       xstd
+1 0.58171039      0 1.0000000 1.0865104 0.05085931
+2 0.09486032      1 0.4182896 0.4182896 0.03511059
+3 0.06944499      2 0.3234293 0.3432859 0.03644482
+4 0.02737898      3 0.2539843 0.3074253 0.03081912
+5 0.01000000      5 0.1992263 0.2410663 0.02678286
+
+Selected cp_min = 0.01 (minimum CV error)
+Selected cp_1se = 0.01 (1-SE rule, simpler tree)

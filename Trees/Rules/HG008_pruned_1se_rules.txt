@@ -1,0 +1,23 @@
+Cell line: HG008 
+Tree:      pruned_1se 
+Root n:    3 nodes
+
+=== Decision rules ===
+[2] is_correct is 0.00 with cover 88% when
+        SV_type is BND or INS or INV
+
+[3] is_correct is 0.95 with cover 12% when
+        SV_type is DEL or DUP
+
+=== Variable importance ===
+SV_type      PR      SS 
+ 296.32   66.28   15.60 
+
+=== CP table (cross-validated error per pruning level) ===
+          CP nsplit  rel error     xerror        xstd
+1 0.94926350      0 1.00000000 1.16603019 0.106170702
+2 0.03273322      1 0.05073650 0.05073650 0.008894627
+3 0.01000000      2 0.01800327 0.04349882 0.022929574
+
+Selected cp_min = 0.01 (minimum CV error)
+Selected cp_1se = 0.0327 (1-SE rule, simpler tree)

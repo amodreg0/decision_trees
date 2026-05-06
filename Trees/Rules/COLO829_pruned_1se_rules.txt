@@ -1,0 +1,23 @@
+Cell line: COLO829 
+Tree:      pruned_1se 
+Root n:    3 nodes
+
+=== Decision rules ===
+[2] is_correct is 0.00 with cover 85% when
+        SR < 7
+
+[3] is_correct is 0.92 with cover 15% when
+        SR >= 7
+
+=== Variable importance ===
+         SR          SS          PR PR_SR_ratio     SV_type          ND 
+     194.86      182.87      164.88      134.91      110.92       17.99 
+
+=== CP table (cross-validated error per pruning level) ===
+          CP nsplit  rel error    xerror       xstd
+1 0.91095890      0 1.00000000 1.2347317 0.14281186
+2 0.02054795      1 0.08904110 0.1180080 0.03383800
+3 0.01000000      3 0.04794521 0.1241438 0.04539905
+
+Selected cp_min = 0.0205 (minimum CV error)
+Selected cp_1se = 0.0205 (1-SE rule, simpler tree)

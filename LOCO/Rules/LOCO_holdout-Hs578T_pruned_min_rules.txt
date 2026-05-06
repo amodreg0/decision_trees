@@ -1,0 +1,55 @@
+Held-out cell line: Hs578T 
+Tree:                pruned_min 
+
+=== Decision rules ===
+[54] is_correct is 0.00 with cover 1% when
+         SS is 50 to 59
+         SV_type is BND or INS
+         ND >= 2.9
+         PR_SR_ratio >= 0.44
+
+[26] is_correct is 0.08 with cover 2% when
+         SS >= 50
+         SV_type is BND or INS
+         ND >= 2.9
+         PR_SR_ratio < 0.44
+
+[2]  is_correct is 0.09 with cover 47% when
+         SS < 50
+
+[12] is_correct is 0.23 with cover 16% when
+         SS >= 50
+         SV_type is BND or INS
+         ND < 2.9
+
+[55] is_correct is 0.67 with cover 11% when
+         SS >= 59
+         SV_type is BND or INS
+         ND >= 2.9
+         PR_SR_ratio >= 0.44
+
+[7]  is_correct is 0.89 with cover 24% when
+         SS >= 50
+         SV_type is DEL or DUP or INV
+
+=== Variable importance ===
+         SS          PR     SV_type          SR PR_SR_ratio          ND 
+    1142.58      700.55      679.53      503.72      197.85      126.36 
+        ND2 
+      54.46 
+
+=== Performance on held-out cell line ( Hs578T ) ===
+  TP=37  FP=21  FN=6  TN=716
+  Precision=0.638  Recall=0.860  F1=0.733
+
+=== CP table ===
+          CP nsplit rel error    xerror        xstd
+1 0.53293994      0 1.0000000 1.0269912 0.016136878
+2 0.08342610      1 0.4670601 0.4711822 0.009332458
+3 0.05460617      2 0.3836340 0.3885384 0.013325414
+4 0.01870550      3 0.3290278 0.3301759 0.010189266
+5 0.01388617      4 0.3103223 0.3127608 0.010202785
+6 0.01000000      5 0.2964361 0.3072845 0.010174904
+
+cp_min = 0.01 (minimum CV error)
+cp_1se = 0.0139 (1-SE rule — simpler tree)

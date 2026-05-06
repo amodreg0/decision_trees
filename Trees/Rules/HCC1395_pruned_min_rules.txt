@@ -1,0 +1,28 @@
+Cell line: HCC1395 
+Tree:      pruned_min 
+Root n:    5 nodes
+
+=== Decision rules ===
+[2] is_correct is 0.08 with cover 28% when
+        SR < 8
+
+[6] is_correct is 0.32 with cover 21% when
+        SR >= 8
+        SV_type is BND or INS
+
+[7] is_correct is 0.82 with cover 51% when
+        SR >= 8
+        SV_type is DEL or DUP or INV
+
+=== Variable importance ===
+         SR     SV_type          SS PR_SR_ratio 
+     167.59       96.79       86.48        7.16 
+
+=== CP table (cross-validated error per pruning level) ===
+         CP nsplit rel error    xerror       xstd
+1 0.4835986      0 1.0000000 1.0386612 0.03026087
+2 0.1524168      1 0.5164014 0.5239202 0.02704252
+3 0.0100000      2 0.3639846 0.3797508 0.02350164
+
+Selected cp_min = 0.01 (minimum CV error)
+Selected cp_1se = 0.01 (1-SE rule, simpler tree)

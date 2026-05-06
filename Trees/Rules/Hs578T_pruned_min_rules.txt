@@ -1,0 +1,25 @@
+Cell line: Hs578T 
+Tree:      pruned_min 
+Root n:    3 nodes
+
+=== Decision rules ===
+[2] is_correct is 0.07 with cover 90% when
+        SS < 53
+
+[3] is_correct is 0.95 with cover 10% when
+        SS >= 53
+
+=== Variable importance ===
+    SS     PR 
+302.15 164.81 
+
+=== CP table (cross-validated error per pruning level) ===
+          CP nsplit  rel error    xerror       xstd
+1 0.88002903      0 1.00000000 1.2584330 0.12638862
+2 0.01240100      1 0.11997097 0.1445836 0.04697330
+3 0.01240100      3 0.09516898 0.1963333 0.05256774
+4 0.01085482      4 0.08276798 0.1936196 0.05254562
+5 0.01000000      5 0.07191316 0.1868354 0.05248948
+
+Selected cp_min = 0.0124 (minimum CV error)
+Selected cp_1se = 0.0124 (1-SE rule, simpler tree)

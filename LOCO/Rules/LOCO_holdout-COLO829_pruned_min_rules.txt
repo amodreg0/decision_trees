@@ -1,0 +1,47 @@
+Held-out cell line: COLO829 
+Tree:                pruned_min 
+
+=== Decision rules ===
+[26] is_correct is 0.03 with cover 1% when
+         SS >= 53
+         SV_type is BND or INS
+         ND >= 2.9
+         PR_SR_ratio < 0.44
+
+[2]  is_correct is 0.11 with cover 51% when
+         SS < 53
+
+[12] is_correct is 0.24 with cover 15% when
+         SS >= 53
+         SV_type is BND or INS
+         ND < 2.9
+
+[27] is_correct is 0.67 with cover 11% when
+         SS >= 53
+         SV_type is BND or INS
+         ND >= 2.9
+         PR_SR_ratio >= 0.44
+
+[7]  is_correct is 0.90 with cover 22% when
+         SS >= 53
+         SV_type is DEL or DUP or INV
+
+=== Variable importance ===
+         SS          PR     SV_type          SR PR_SR_ratio          ND 
+    1219.74      813.85      725.08      461.86      239.96      132.94 
+        ND2 
+      56.35 
+
+=== Performance on held-out cell line ( COLO829 ) ===
+  TP=22  FP=23  FN=10  TN=415
+  Precision=0.489  Recall=0.688  F1=0.571
+
+=== CP table ===
+          CP nsplit rel error    xerror        xstd
+1 0.55994826      0 1.0000000 1.0309904 0.014780301
+2 0.06120843      1 0.4400517 0.4487435 0.009221751
+3 0.01861050      3 0.3176349 0.3268810 0.009957028
+4 0.01000000      4 0.2990244 0.2974797 0.010083205
+
+cp_min = 0.01 (minimum CV error)
+cp_1se = 0.01 (1-SE rule — simpler tree)

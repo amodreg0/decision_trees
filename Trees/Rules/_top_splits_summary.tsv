@@ -1,0 +1,10 @@
+Cell_line	Top_split_var	Top_split_threshold
+H2009	SV_type	1
+HCC1395	SR	7.5
+HCC1937	SS	64.5
+HCC1954	SS	58.5
+H1437	SS	70.5
+Hs578T	SS	52.5
+HG008	SV_type	1
+COLO829	SR	6.5
+ALL	SS	49.5

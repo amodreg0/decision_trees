@@ -1,0 +1,39 @@
+Held-out cell line: H2009 
+Tree:                pruned_min 
+
+=== Decision rules ===
+[2]  is_correct is 0.09 with cover 54% when
+         SS < 51
+
+[12] is_correct is 0.29 with cover 10% when
+         SS >= 51
+         SV_type is BND or INS
+         PR_SR_ratio < 1.2
+
+[13] is_correct is 0.65 with cover 12% when
+         SS >= 51
+         SV_type is BND or INS
+         PR_SR_ratio >= 1.2
+
+[7]  is_correct is 0.89 with cover 24% when
+         SS >= 51
+         SV_type is DEL or DUP or INV
+
+=== Variable importance ===
+         SS          PR     SV_type          SR PR_SR_ratio          ND 
+    1272.07      874.76      584.55      570.79      375.23       18.14 
+        ND2 
+       6.00 
+
+=== Performance on held-out cell line ( H2009 ) ===
+  TP=164  FP=297  FN=29  TN=1021
+  Precision=0.356  Recall=0.850  F1=0.502
+
+=== CP table ===
+          CP nsplit rel error    xerror        xstd
+1 0.62942351      0 1.0000000 1.0326773 0.016949026
+2 0.03551419      1 0.3705765 0.3705765 0.009478988
+3 0.01000000      3 0.2995481 0.3020427 0.010295976
+
+cp_min = 0.01 (minimum CV error)
+cp_1se = 0.01 (1-SE rule — simpler tree)

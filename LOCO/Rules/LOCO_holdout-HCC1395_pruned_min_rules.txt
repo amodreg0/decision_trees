@@ -1,0 +1,47 @@
+Held-out cell line: HCC1395 
+Tree:                pruned_min 
+
+=== Decision rules ===
+[2]  is_correct is 0.06 with cover 57% when
+         SS < 53
+
+[26] is_correct is 0.13 with cover 2% when
+         SS >= 53
+         SV_type is BND or INS
+         ND >= 2.9
+         PR_SR_ratio < 0.44
+
+[12] is_correct is 0.30 with cover 15% when
+         SS >= 53
+         SV_type is BND or INS
+         ND < 2.9
+
+[27] is_correct is 0.74 with cover 10% when
+         SS >= 53
+         SV_type is BND or INS
+         ND >= 2.9
+         PR_SR_ratio >= 0.44
+
+[7]  is_correct is 0.91 with cover 17% when
+         SS >= 53
+         SV_type is DEL or DUP or INV
+
+=== Variable importance ===
+         SS          PR     SV_type          SR PR_SR_ratio          ND 
+    1405.89      920.05      543.55      513.03      144.44      137.95 
+        ND2 
+      59.34 
+
+=== Performance on held-out cell line ( HCC1395 ) ===
+  TP=483  FP=183  FN=100  TN=349
+  Precision=0.725  Recall=0.828  F1=0.773
+
+=== CP table ===
+          CP nsplit rel error    xerror        xstd
+1 0.63280322      0 1.0000000 1.0357777 0.020245201
+2 0.04795463      1 0.3671968 0.3690532 0.009073492
+3 0.01588627      3 0.2712875 0.2734229 0.011187257
+4 0.01000000      4 0.2554012 0.2631236 0.011458819
+
+cp_min = 0.01 (minimum CV error)
+cp_1se = 0.0159 (1-SE rule — simpler tree)

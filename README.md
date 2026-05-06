@@ -34,7 +34,7 @@ Both scripts write bgzipped, tabix-indexed VCFs and are designed to be run on th
 
 ---
 
-### 2. VCF filtering and Truvari benchmarking (`truvari_filter.sh`)
+### 2. VCF filtering and Truvari benchmarking (`run_truvari_slurm_DT.sh`)
 
 A SLURM array job (one task per cell line, 8 total) that:
 
